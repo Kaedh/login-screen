@@ -12,9 +12,10 @@ import
 type InputProps = {
     placeholder: string,
     children?: Object,
+    errorMessage?: string,
 }
 
-const Input = ({ placeholder, children,  } : InputProps) => 
+const Input = ({ placeholder, children, errorMessage } : InputProps) => 
 {
     return (
         <InputContainer data-testid="custom-input" >
@@ -26,7 +27,7 @@ const Input = ({ placeholder, children,  } : InputProps) =>
 
             <BottomWrapper> 
                 <BottomLine />
-                <ErrorWrapper></ErrorWrapper>
+                <ErrorWrapper>{errorMessage}</ErrorWrapper>
             </BottomWrapper>
 
         </InputContainer>
