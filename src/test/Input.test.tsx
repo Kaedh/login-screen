@@ -30,12 +30,23 @@ describe("Input component",  () => {
 
         expect(iconNode.nodeName).toBe('svg');
     });
+
+    test("Should input be able to receive a error message.", () => {
+
+        const errorMessage = "Error Message"
+
+        render( <Input placeholder="test" errorMessage={errorMessage} /> )
+
+        const inputContainer = screen.getByText(errorMessage)
+
+        expect( inputContainer.textContent ).toBe(errorMessage)
+
+    })
 }) 
 
 
 /*
 
-    * Should input a error message
     * Should input accepts only text in only-test field
     * Should input mask password field
 
