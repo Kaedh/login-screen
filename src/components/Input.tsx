@@ -1,5 +1,3 @@
-import { HiOutlineUser } from 'react-icons/hi'; 
-
 import 
 { 
     InputContainer, 
@@ -13,15 +11,16 @@ import
 
 type InputProps = {
     placeholder: string,
+    children?: Object,
 }
 
-const Input = ({ placeholder } : InputProps) => 
+const Input = ({ placeholder, children,  } : InputProps) => 
 {
     return (
         <InputContainer >
 
             <InputWrapper> 
-                <HiOutlineUser color={"white"} />
+                { children }
                 <UserInput placeholder={placeholder} />
             </InputWrapper>
 
