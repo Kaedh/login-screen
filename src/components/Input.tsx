@@ -17,7 +17,7 @@ type InputProps = {
 const Input = ({ placeholder, children,  } : InputProps) => 
 {
     return (
-        <InputContainer >
+        <InputContainer data-testid="custom-input" >
 
             <InputWrapper> 
                 { children }
