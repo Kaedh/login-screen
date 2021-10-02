@@ -1,14 +1,35 @@
-import { InputContainer, BottomLine, ErrorWrapper } from '../styles/InputStyles';
 import { HiOutlineUser } from 'react-icons/hi'; 
 
-const Input: React.FC = () => 
+import 
+{ 
+    InputContainer, 
+    InputWrapper, 
+    BottomWrapper, 
+    BottomLine, 
+    ErrorWrapper, 
+    UserInput 
+
+} from '../styles/InputStyles';
+
+type InputProps = {
+    placeholder: string,
+}
+
+const Input = ({ placeholder } : InputProps) => 
 {
     return (
         <InputContainer >
-            <HiOutlineUser />
-            <input type="text" placeholder={"Nome de usuário"} />
-            <BottomLine />
-            <ErrorWrapper />
+
+            <InputWrapper> 
+                <HiOutlineUser color={"white"} />
+                <UserInput placeholder={placeholder} />
+            </InputWrapper>
+
+            <BottomWrapper> 
+                <BottomLine />
+                <ErrorWrapper></ErrorWrapper>
+            </BottomWrapper>
+
         </InputContainer>
     )
 }

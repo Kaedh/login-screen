@@ -5,7 +5,8 @@ import { Container } from '../styles/SiginStyles';
 const Signin: React.FC = () => {
     return (
         <Container >
-            <Input />
+            <Input placeholder="Nome de usuário" />
+            <Input placeholder="Senha" />
         </Container>
     )
 }
