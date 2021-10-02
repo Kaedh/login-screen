@@ -1,6 +1,12 @@
+import Input from "../components/Input";
+
+import { Container } from '../styles/SiginStyles';
+
 const Signin: React.FC = () => {
     return (
-        <h1>Entrar</h1>
+        <Container >
+            <Input />
+        </Container>
     )
 }
 
