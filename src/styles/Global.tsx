@@ -6,6 +6,9 @@ const Global = createGlobalStyle`
     --light-black: #212529;
     --light-gray: #8D8F91;
     --white: #FFF;
+    --red: #CC444B;
+
+    font-size: 20px;
 
   }
 
@@ -24,7 +27,7 @@ const Global = createGlobalStyle`
     justify-content: center;
 
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    
 
   }
 `
