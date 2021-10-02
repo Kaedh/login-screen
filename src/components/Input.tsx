@@ -1,6 +1,15 @@
-const Input: React.FC = () => {
+import { InputContainer, BottomLine, ErrorWrapper } from '../styles/InputStyles';
+import { HiOutlineUser } from 'react-icons/hi'; 
+
+const Input: React.FC = () => 
+{
     return (
-        <input />
+        <InputContainer >
+            <HiOutlineUser />
+            <input type="text" placeholder={"Nome de usuário"} />
+            <BottomLine />
+            <ErrorWrapper />
+        </InputContainer>
     )
 }
 
