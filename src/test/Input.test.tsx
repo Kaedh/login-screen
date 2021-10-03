@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event'
 import { HiOutlineUser } from 'react-icons/hi'; 
 import Input from '../components/Input';
 
@@ -43,22 +44,21 @@ describe("Input component",  () => {
 
     });
 
-    test("Should input accepts only text in only-text field", () => {
+    test("Should be able to show users input", () => {
+        render( <Input placeholder="test" /> )
 
-        render( <Input placeholder="test" only-text /> )
+        const inputNode = screen.getByPlaceholderText("test") as HTMLInputElement;
 
-        const inputNode = screen.getByPlaceholderText("test");
-        
-        inputNode.textContent = "123456"
+        userEvent.type(inputNode, "Leonardo")
 
-        expect(  inputNode.textContent ).toBe("")
+        expect(  inputNode.value ).toBe("Leonardo")
     });
+
+
 }) 
 
 
 /*
-
-    * 
+    * Input Should be able to show users input
     * Should input mask password field
-
 */
