@@ -41,13 +41,24 @@ describe("Input component",  () => {
 
         expect( inputContainer.textContent ).toBe(errorMessage)
 
-    })
+    });
+
+    test("Should input accepts only text in only-text field", () => {
+
+        render( <Input placeholder="test" only-text /> )
+
+        const inputNode = screen.getByPlaceholderText("test");
+        
+        inputNode.textContent = "123456"
+
+        expect(  inputNode.textContent ).toBe("")
+    });
 }) 
 
 
 /*
 
-    * Should input accepts only text in only-test field
+    * 
     * Should input mask password field
 
 */
